@@ -60,7 +60,17 @@ module.exports = {
     ],
   },
   plugins: [
-    new ModuleFederationPlugin({}),
+    new ModuleFederationPlugin({
+      name: "remote1",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./Button": "./src/Page1",
+        "./Heading": "./src/Page2",
+      },
+      remotes: {
+        libs: "libs@[libsUrl]/remoteEntry.js",
+      },
+    }),
     new ExternalTemplateRemotesPlugin(),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
