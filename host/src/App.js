@@ -7,8 +7,8 @@ import {
 } from "libs/react-router-dom";
 
 const Page2 = React.lazy(() => import("remote1/Page2"));
-
 const Button = React.lazy(() => import("remote1/Button"));
+const Input = React.lazy(() => import("remote2/Input"));
 
 const App = () => {
   return (
@@ -37,6 +37,9 @@ const App = () => {
             <li>
               <Link to="/page2">Page2</Link>
             </li>
+            <li>
+              <Link to="/input">Input:3003</Link>
+            </li>
           </ul>
         </nav>
         <Suspense fallback={"loading..."}>
@@ -46,6 +49,14 @@ const App = () => {
             </Route>
             <Route path="/page2">
               <Page2 />
+            </Route>
+            <Route path="/input">
+              <Input />
+              <Input />
+              <Input />
+              <Input />
+              <Input />
+              <Input />
             </Route>
           </Switch>
         </Suspense>
