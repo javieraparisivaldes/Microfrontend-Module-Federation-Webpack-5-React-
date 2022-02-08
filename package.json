@@ -1,0 +1,13 @@
+{
+  "name": "dipjaen",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"cd host && npm run start\" \"cd microfrontend1 && npm run serve\" \"cd microfrontend2 && npm run serve\" \"cd libs && npm run serve\""
+  },
+  "private": true,
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}

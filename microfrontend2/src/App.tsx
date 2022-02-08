@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'libs/react';
 import './App.css';
 
 function App() {
